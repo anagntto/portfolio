@@ -50,20 +50,57 @@
 									<header class="major">
 										<h2>Projeção de Crescimento E-Commerce - Contexto </h2>
 									</header>
-									<p>Previsão de crescimento dos canais organicos, pagos e performance de vendas através da aplicação de modelos estatísticos para estimar o crescimento de cada canal.
-										<p>Considerações iniciais: Primeiro foi feita uma análise exploratória para entender como está a qualidade do banco de dados, se há dados duplicados, nulos ou incoerentes ou até algum problema na base que possa prejudicar a qualidade dos dados. </p>
-										<p>Com problemas solucionados, foi analisado o histórico dos canais se o volume de dados é suficiente para uma projeção de crescimento. Também não foi considerado sazonalidade, visto que temos pouco histórico para definição de comportamento padrão. </p>
+									<p>O objetivo deste projeto foi realizar uma análise dos dados históricos e montar uma projeção de crescimento dos canais orgânicos, pagos e performance de vendas através da aplicação de modelos estatísticos para estimar o crescimento de cada canal. Por se tratar de uma ''projeção flexível'' foi decido manter o arquivo em Excel para facilitar uso e atualização pelas áreas.
 										<p>Ferramentas utilizadas: Excel, Python.</p>
-										<p>Créditos: Kaggle (base de dados) e CDO </p>
-										<p>Arquivo adaptado para Google Sheets:<a href="https://docs.google.com/spreadsheets/d/1lteDWu0i6S08aO5J-DtTntcm_dhfRMcs/edit?usp=sharing&ouid=110192682396937009074&rtpof=true&sd=true">Projeção de Crescimento E-Commerce</a></p>
+										<p>Créditos: Kaggle (base de dados da Olist) e CDO </p>
 								</div>
 							</section>
 
 						<!-- Two -->
 							<section id="two">
 								<div class="container">
-									<h3>Projeção</h3>
-									<p>Após testes e validações, foi decido seguir com o modelo de previsão de regressão linear</p>
+									<h3>Etapa 1 - Entendimento do problema e da solução</h3>
+									<p>O CEO da empresa com foco em B2B quer saber como vamos crescer o negócio se manter o ritmo atual no setor de marketing e vendas. 
+										Para isso vamos precisar analisar a previsão de crescimento de quantos leads, clientes, receita,  vamos ter projetados nos próximos 12 meses.
+										Após entendimento do negócio e fluxo de aquisição de clientes, definimos o que vai ser necessário para o projeto.</p>
+										
+										<p>Definição de fontes de dados e indicadores:</p>
+										<p><b>Canais Pagos:</b> Google Ads e Facebook Ads. <b>Indicadores:</b> CPC, cliques, investimento, taxa de conversão, leads.</p>
+										<p><b>Canais orgânicos:</b> Google Analytics. <b>Indicadores:</b> Sessões, taxa de conversão, leads</p>
+										<p><b>Vendas:</b> Base de dados em csv. <b>Indicadores:</b> Vendas, conversão de vendas</p>
+
+								</div>
+							</section>
+
+							<!-- Three -->
+							<section id="Three">
+								<div class="container">
+									<h3>Etapa 2 - Sanity check e modelagem</h3>
+									<p>Como as bases de dados estão em diferentes arquivos no formato CSV, foi utilizado Python para unir as tabelas (left join utilizando o mql_id como PK) e renomear algumas colunas.</p>
+										<p>Após junção de tabelas, foi realizado a conferencia da qualidade dos dados, se há dados duplicados, nulos, incoerentes ou até algum problema na base que possa prejudicar a projeção.</p>
+										<p>Com problemas solucionados, foi analisado o histórico dos canais se o volume de dados é suficiente para uma projeção de crescimento. Também não foi considerado sazonalidade, visto que temos pouco histórico para definição de comportamento padrão.</p>
+										<a href="Analise%20de%20dados%20Leads.html">Notebook Python</a>
+
+								</div>
+							</section>
+							<!-- Four -->
+							<section id="four">
+								<div class="container">
+									<h3>Etapa 3 - Projeção e mensuração de erros</h3>
+									<p>Para a projeção, foram testados 2 modelos: Exponential smoothing por requerer menos dados e dar ênfase nos meses recentes, e regressão linear seguindo uma reta. </p>
+									<img src="images/project02-processo.png" alt="projecao02" width="1000" height="400">
+
+
+								</div>
+							</section>
+							<!-- Five -->
+							<section id="five">
+								<div class="container">
+									<h3>Etapa 4 - Formatação</h3>
+									<p>Ocultação de abas com base de dados originais, adição de cores para mostrar o que pode e não pode ser alterado, adição de gráficos e comentários.</p>
+
+									<p>Arquivo adaptado para Google Sheets: <a href="https://docs.google.com/spreadsheets/d/1lteDWu0i6S08aO5J-DtTntcm_dhfRMcs/edit?usp=sharing&ouid=110192682396937009074&rtpof=true&sd=true">Projeção de Crescimento E-Commerce</a></p>
+
 								</div>
 							</section>
 
