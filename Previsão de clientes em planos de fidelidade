@@ -1,0 +1,420 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "toc_visible": true,
+      "authorship_tag": "ABX9TyMJWmTok1RAgnRQsDUjvhAc",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/anagntto/projects/blob/main/Previs%C3%A3o%20de%20clientes%20em%20planos%20de%20fidelidade\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "cInTKMx1KmJp"
+      },
+      "outputs": [],
+      "source": [
+        "# importando as bibliotecas\n",
+        "import sqlite3\n",
+        "import pandas as pd\n",
+        "# abrindo a conexão com o banco de dados\n",
+        "conn = sqlite3.connect( \"/content/database.db\" )"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# coletando os dados\n",
+        "consulta_atividade = \"\"\"\n",
+        "SELECT *\n",
+        "FROM\n",
+        "flight_activity fa\n",
+        " LEFT JOIN flight_loyalty_history flh\n",
+        " ON (fa.loyalty_number = flh.loyalty_number )\n",
+        "\"\"\""
+      ],
+      "metadata": {
+        "id": "9myNfXNWrVxB"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# executando a consulta\n",
+        "df_atividade = pd.read_sql_query(consulta_atividade,conn)"
+      ],
+      "metadata": {
+        "id": "YFR-8GNN5v3z",
+        "outputId": "d1e85993-00e7-415b-a840-d68e873f20a7",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 512
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "DatabaseError",
+          "evalue": "Execution failed on sql '\nSELECT *\nFROM\nflight_activity fa\n LEFT JOIN flight_loyalty_history flh\n ON (fa.loyalty_number = flh.loyalty_number )\n': no such table: flight_activity",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mOperationalError\u001b[0m                          Traceback (most recent call last)",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/sql.py\u001b[0m in \u001b[0;36mexecute\u001b[0;34m(self, sql, params)\u001b[0m\n\u001b[1;32m   2201\u001b[0m         \u001b[0;32mtry\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 2202\u001b[0;31m             \u001b[0mcur\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mexecute\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0msql\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m*\u001b[0m\u001b[0margs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   2203\u001b[0m             \u001b[0;32mreturn\u001b[0m \u001b[0mcur\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mOperationalError\u001b[0m: no such table: flight_activity",
+            "\nThe above exception was the direct cause of the following exception:\n",
+            "\u001b[0;31mDatabaseError\u001b[0m                             Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-3-6a03e9b372e9>\u001b[0m in \u001b[0;36m<cell line: 2>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;31m# executando a consulta\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mdf_atividade\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mpd\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mread_sql_query\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mconsulta_atividade\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0mconn\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/sql.py\u001b[0m in \u001b[0;36mread_sql_query\u001b[0;34m(sql, con, index_col, coerce_float, params, parse_dates, chunksize, dtype, dtype_backend)\u001b[0m\n\u001b[1;32m    467\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    468\u001b[0m     \u001b[0;32mwith\u001b[0m \u001b[0mpandasSQL_builder\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mcon\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0mpandas_sql\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 469\u001b[0;31m         return pandas_sql.read_query(\n\u001b[0m\u001b[1;32m    470\u001b[0m             \u001b[0msql\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    471\u001b[0m             \u001b[0mindex_col\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mindex_col\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/sql.py\u001b[0m in \u001b[0;36mread_query\u001b[0;34m(self, sql, index_col, coerce_float, parse_dates, params, chunksize, dtype, dtype_backend)\u001b[0m\n\u001b[1;32m   2264\u001b[0m         \u001b[0mdtype_backend\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0mDtypeBackend\u001b[0m \u001b[0;34m|\u001b[0m \u001b[0mLiteral\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"numpy\"\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m\"numpy\"\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   2265\u001b[0m     ) -> DataFrame | Iterator[DataFrame]:\n\u001b[0;32m-> 2266\u001b[0;31m         \u001b[0mcursor\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mexecute\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0msql\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mparams\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   2267\u001b[0m         \u001b[0mcolumns\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m[\u001b[0m\u001b[0mcol_desc\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m0\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;32mfor\u001b[0m \u001b[0mcol_desc\u001b[0m \u001b[0;32min\u001b[0m \u001b[0mcursor\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mdescription\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   2268\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/sql.py\u001b[0m in \u001b[0;36mexecute\u001b[0;34m(self, sql, params)\u001b[0m\n\u001b[1;32m   2212\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   2213\u001b[0m             \u001b[0mex\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mDatabaseError\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34mf\"Execution failed on sql '{sql}': {exc}\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 2214\u001b[0;31m             \u001b[0;32mraise\u001b[0m \u001b[0mex\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0mexc\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   2215\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   2216\u001b[0m     \u001b[0;34m@\u001b[0m\u001b[0mstaticmethod\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mDatabaseError\u001b[0m: Execution failed on sql '\nSELECT *\nFROM\nflight_activity fa\n LEFT JOIN flight_loyalty_history flh\n ON (fa.loyalty_number = flh.loyalty_number )\n': no such table: flight_activity"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "df_atividade.head()"
+      ],
+      "metadata": {
+        "id": "6_gJskTssP8A"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Fechando a conexão com banco de dados\n",
+        "conn.close()"
+      ],
+      "metadata": {
+        "id": "85-mHxo2XAdW"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 4.0 Análise de dados"
+      ],
+      "metadata": {
+        "id": "QaqGtoWKzb7u"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 5.0 Inspeção de dados\n"
+      ],
+      "metadata": {
+        "id": "TrHZl9Tb6135"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Contar o numero de linhas de um conjunto de dados\n",
+        "df_atividade.shape\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "DmtGIRuA666U"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "df_atividade.info()"
+      ],
+      "metadata": {
+        "id": "MNSWTU2a7Hzz"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "df_atividade.describe()"
+      ],
+      "metadata": {
+        "id": "FDMFis6E9AGO"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "df_atividade.isna().sum()"
+      ],
+      "metadata": {
+        "id": "IPGIN3_69V8q"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 6.0 Preparação dos dados"
+      ],
+      "metadata": {
+        "id": "A1x-_CnnXLqq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Selecionar as linhas que contém apenas dados numéricos\n",
+        "colunas = [\"year\", \"month\", \"flights_booked\",\n",
+        "\"flights_with_companions\", \"total_flights\",\n",
+        "\"distance\", \"points_accumulated\", \"salary\",\n",
+        "\"clv\", \"loyalty_card\"]\n",
+        "\n",
+        "df_colunas_selecionadas = df_atividade.loc[:,colunas]\n",
+        "\n",
+        "# Remover todas as linhas que contém alguma coluna com\n",
+        "# dados faltantes\n",
+        "df_treinamento = df_colunas_selecionadas.dropna()\n",
+        "\n",
+        "# Verificar se os dados não tem dados faltantes\n",
+        "df_treinamento.isna().sum()"
+      ],
+      "metadata": {
+        "id": "gxZVVH6sXPvH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "gklsqI33XRJr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "df_treinamento.head()"
+      ],
+      "metadata": {
+        "id": "XV1xveMRYFdM"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 7.0 Machine Learning"
+      ],
+      "metadata": {
+        "id": "l4ksbZqOYaNi"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from sklearn import tree as tr"
+      ],
+      "metadata": {
+        "id": "cqcn_wGPYc0S"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "X = df_treinamento.drop( columns=\"loyalty_card\")\n",
+        "y = df_treinamento.loc[:, \"loyalty_card\"]\n",
+        "\n",
+        "# Definindo o algoritmo de machine learning\n",
+        "modelo = tr.DecisionTreeClassifier( max_depth=2)\n",
+        "\n",
+        "# Treinando o algoritmo Decision Tree\n",
+        "modelo_treinado = modelo.fit( X, y )"
+      ],
+      "metadata": {
+        "id": "bZ6kHNl8Y-NU"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#tr.plot_tree(modelo_treinado, filled=True );"
+      ],
+      "metadata": {
+        "id": "6BxMQO_hbXET"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "HpNnnZuUpCVZ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 7.1 Previsões"
+      ],
+      "metadata": {
+        "id": "9JuqWbC5pJF6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "X_novo = X.sample()"
+      ],
+      "metadata": {
+        "id": "vuM5V_yWpLXL"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "previsao = modelo_treinado.predict_proba( X_novo )\n",
+        "print( 'Prob - Aurora:{:.2f}% - Nova:{:.2f}% - Star:{:.2f}%'.format( 100*previsao[0][0], 100*previsao[0][1], 100*previsao[0][2] ) )\n"
+      ],
+      "metadata": {
+        "id": "fqReMb0sp9X6"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 8.0 Painel de visualização"
+      ],
+      "metadata": {
+        "id": "51hwpi8hUi1n"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!pip install gradio\n",
+        "import gradio as gr\n",
+        "import numpy as np"
+      ],
+      "metadata": {
+        "id": "nVHrsH-eUjvK"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Descobrindo os valores min e max\n",
+        "df_treinamento.describe()"
+      ],
+      "metadata": {
+        "id": "S5MI4pvqc1WX"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Criando a função de previsão\n",
+        "def predict ( *args ):\n",
+        "  X = np.array( [args] ).reshape( 1, -1)\n",
+        "\n",
+        "  previsao = modelo_treinado.predict_proba( X )\n",
+        "  return {\"Aurora\": previsao[0][0], \"Nova\": previsao[0][1], \"Star\": previsao[0][2] }\n",
+        "\n",
+        "with gr.Blocks() as demo:\n",
+        "  # Titulo do painel\n",
+        "  gr.Markdown(\"\"\" # Propensão de Compra \"\"\")\n",
+        "\n",
+        "  with gr.Row():\n",
+        "    with gr.Column():\n",
+        "      gr.Markdown(\"\"\" # Atributos do Cliente \"\"\")\n",
+        "      year = gr.Slider( label=\"year\", minimum=2017, maximum=2018, step=1, randomize=True )\n",
+        "      month = gr.Slider( label=\"month\", minimum=1, maximum=12, step=1, randomize=True )\n",
+        "      flights_booked = gr.Slider( label=\"flights_booked\", minimum=0, maximum=21, step=1, randomize=True )\n",
+        "      flights_with_companions = gr.Slider( label=\"flights_with_companions\", minimum=0, maximum=11, step=1, randomize=True )\n",
+        "      total_flights = gr.Slider( label=\"total_flights\", minimum=0, maximum=32, step=1, randomize=True )\n",
+        "      distance = gr.Slider( label=\"distance\", minimum=0, maximum=6293, step=1, randomize=True )\n",
+        "      points_accumulated = gr.Slider( label=\"points_accumulated\", minimum=0, maximum=676, step=0.1, randomize=True )\n",
+        "      salary = gr.Slider( label=\"salary\", minimum=58486.00, maximum=407228.00, step=0.1, randomize=True )\n",
+        "      clv = gr.Slider( label=\"clv\", minimum=2119.89, maximum=83325.38, step=0.1, randomize=True )\n",
+        "\n",
+        "      with gr.Row():\n",
+        "        gr.Markdown(\"\"\" # Botão de Previsão \"\"\")\n",
+        "        predict_btn = gr.Button( value=\"Previsao\" )\n",
+        "\n",
+        "    with gr.Column():\n",
+        "      gr.Markdown(\"\"\" # Propensão de Compra \"\"\")\n",
+        "      label = gr.Label()\n",
+        "\n",
+        "  # Botao de previsao\n",
+        "  predict_btn.click(\n",
+        "      fn=predict,\n",
+        "      inputs=[\n",
+        "          year,\n",
+        "          month,\n",
+        "          flights_booked,\n",
+        "          flights_with_companions,\n",
+        "          total_flights,\n",
+        "          distance,\n",
+        "          points_accumulated,\n",
+        "          salary,\n",
+        "          clv\n",
+        "            ],\n",
+        "      outputs=[label],\n",
+        "  )\n",
+        "\n",
+        "demo.launch()"
+      ],
+      "metadata": {
+        "id": "XgemNcDGV6c9"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
