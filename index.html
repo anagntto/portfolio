@@ -1,429 +1,465 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Paula Gnoatto - Data Analyst | Data Scientist </title>
-    <meta name="description" content="Data analyst with 3+ years of experience driving business impact across marketing, healthcare, and SaaS industries.">
+    <title>Ana Paula Gnoatto - Data Analyst & Data Science</title>
+    <meta name="description" content="Portfólio de Ana Paula Gnoatto - Analista de Dados e Cientista de Dados com 3+ anos de experiência em marketing, saúde e SaaS.">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Background -->
-    <div class="background-overlay"></div>
-    
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="profile-section">
-            <div class="profile-image">
-                <div class="profile-placeholder">AP</div>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Ana Paula Gnoatto</a>
             </div>
-            <h1 class="profile-name">Ana Gnoatto</h1>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experiência</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contato</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-        
-        <nav class="sidebar-nav">
-            <a href="#about" class="nav-link active" data-section="about">About</a>
-            <a href="#skills" class="nav-link" data-section="skills">Skills</a>
-            <a href="#experience" class="nav-link" data-section="experience">Experience</a>
-            <a href="#projects" class="nav-link" data-section="projects">Projects</a>
-            <a href="#contact" class="nav-link" data-section="contact">Contact</a>
-        </nav>
-        
-        <div class="social-links">
-            <a href="https://linkedin.com/in/ana-paula-gnoatto-08852820a" target="_blank" class="social-link linkedin" title="LinkedIn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-            </a>
-            <a href="https://github.com/anagntto" target="_blank" class="social-link github" title="GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-        </div>
-    </div>
-    
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- About Section -->
-        <section id="about" class="section active">
-            <div class="container">
-                <h2 class="section-title">About</h2>
-                <div class="about-content">
-                    <p class="intro-text">
-                        Hello! I'm Ana Paula, a data analyst with 3+ years of experience driving business impact across marketing, healthcare, and SaaS industries. My marketing background gives me a unique edge in translating complex data into actionable insights that directly influence revenue and business strategy.
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Olá, eu sou <span class="highlight">Ana Paula Gnoatto</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Data Analyst & Data Science</h2>
+                    <p class="hero-description">
+                        Analista de dados com 3+ anos de experiência transformando dados complexos em insights acionáveis que impulsionam resultados de negócio.
                     </p>
-                    <p>
-                        I specialize in leveraging data science methodologies—including A/B testing, statistical modeling, and machine learning—to solve critical business problems, optimize operations, and identify growth opportunities. Whether it's preventing revenue loss or uncovering new market opportunities, I focus on delivering measurable results.
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                        <a href="#contact" class="btn btn-secondary">Entre em Contato</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-avatar">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Anos de Experiência</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Ferramentas Técnicas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Empresas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="featured-projects">
+        <div class="container">
+            <h2 class="section-title">Projetos em Destaque</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Dashboard de Performance Marketing</h3>
+                    <p>Análise de dados de campanhas multi-canal com redução de 30% no CAC através de insights de aquisição.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Google Analytics</span>
+                    </div>
+                    <a href="#projects" class="project-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Produtos de Dados para Saúde</h3>
+                    <p>Desenvolvimento de produtos de dados para indústrias farmacêuticas e de saúde usando SQL, R e Snowflake.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">R</span>
+                        <span class="tech-tag">Snowflake</span>
+                        <span class="tech-tag">Tableau</span>
+                    </div>
+                    <a href="#projects" class="project-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Testes A/B e Modelagem Estatística</h3>
+                    <p>Implementação de testes A/B e modelos de machine learning para otimização de conversões e estratégias de negócio.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">R</span>
+                        <span class="tech-tag">Machine Learning</span>
+                    </div>
+                    <a href="#projects" class="project-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre Mim</h2>
+                    <p class="about-description">
+                        Sou uma analista de dados com mais de 3 anos de experiência transformando dados complexos em insights acionáveis que impulsionam o impacto nos negócios. Minha formação em marketing me dá uma vantagem única na tradução de dados complexos em insights que influenciam diretamente a receita e a estratégia de negócios.
+                    </p>
+                    <p class="about-description">
+                        Especializo-me em metodologias de ciência de dados—incluindo testes A/B, modelagem estatística e machine learning—para resolver problemas críticos de negócio, otimizar operações e identificar oportunidades de crescimento.
                     </p>
                     
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-number">3+</div>
-                            <div class="stat-label">Years of Experience</div>
+                    <div class="skills-section">
+                        <h3>Competências Principais</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Análise Estatística de Dados</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-aws"></i>
+                                <span>Amazon Web Services (AWS)</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database"></i>
+                                <span>Amazon Redshift</span>
+                            </div>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-number">15+</div>
-                            <div class="stat-label">Technical Tools</div>
+                    </div>
+
+                    <div class="languages-section">
+                        <h3>Idiomas</h3>
+                        <div class="languages-grid">
+                            <div class="language-item">
+                                <span class="language-name">Português</span>
+                                <span class="language-level">Nativo</span>
+                            </div>
+                            <div class="language-item">
+                                <span class="language-name">Inglês</span>
+                                <span class="language-level">Profissional Completo</span>
+                            </div>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">Companies are now more data-driven</div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="tech-stack">
+                        <h3>Stack Técnico</h3>
+                        <div class="tech-categories">
+                            <div class="tech-category">
+                                <h4>Linguagens & Análise</h4>
+                                <div class="tech-items">
+                                    <span class="tech-item">Python</span>
+                                    <span class="tech-item">R</span>
+                                    <span class="tech-item">SQL</span>
+                                    <span class="tech-item">Machine Learning</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Visualização & BI</h4>
+                                <div class="tech-items">
+                                    <span class="tech-item">Power BI</span>
+                                    <span class="tech-item">Tableau</span>
+                                    <span class="tech-item">Looker Studio</span>
+                                    <span class="tech-item">QuickSight</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Dados & Cloud</h4>
+                                <div class="tech-items">
+                                    <span class="tech-item">Snowflake</span>
+                                    <span class="tech-item">AWS</span>
+                                    <span class="tech-item">Excel</span>
+                                    <span class="tech-item">Google Sheets</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 class="section-title">Skills</h2>
-                <div class="skills-content">
-                    <p class="section-subtitle">Main skills and knowledge I've been developing throughout my journey.</p>
-                    
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <div class="skill-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-                                </svg>
+        </div>
+    </section>
+
+    <!-- Experience & Education -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experiência & Educação</h2>
+            
+            <div class="timeline-container">
+                <div class="timeline">
+                    <!-- Experience Items -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Data Analyst</h3>
+                                <span class="company">Clicksign</span>
+                                <span class="period">Dezembro 2024 - Presente</span>
                             </div>
-                            <h3>Languages & Analysis</h3>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Python</span>
+                            <p class="timeline-description">
+                                Realizo análises descritivas aprofundadas usando R para descobrir padrões, tendências e insights acionáveis. Desenvolvo, valido e mantenho modelos estatísticos e de machine learning em R. Produzo relatórios automatizados em R Markdown e Shiny.
+                            </p>
+                            <div class="timeline-skills">
                                 <span class="skill-tag">R</span>
                                 <span class="skill-tag">SQL</span>
                                 <span class="skill-tag">Machine Learning</span>
-                                <span class="skill-tag">Statistical Analysis</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <div class="skill-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
-                                </svg>
-                            </div>
-                            <h3>Visualization & BI</h3>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Power BI</span>
-                                <span class="skill-tag">Tableau</span>
-                                <span class="skill-tag">Looker Studio</span>
                                 <span class="skill-tag">AWS QuickSight</span>
                             </div>
                         </div>
-                        
-                        <div class="skill-category">
-                            <div class="skill-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                </svg>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Business Intelligence Analyst</h3>
+                                <span class="company">Funcional Health Tech</span>
+                                <span class="period">Abril 2023 - Novembro 2024</span>
                             </div>
-                            <h3>Data & Cloud</h3>
-                            <div class="skill-tags">
+                            <p class="timeline-description">
+                                Criei e aprimorei produtos de dados para as indústrias de saúde e farmacêutica. Conduzi análise exploratória de dados e apliquei ferramentas estatísticas para gerar insights e hipóteses.
+                            </p>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">Tableau</span>
+                                <span class="skill-tag">R</span>
                                 <span class="skill-tag">Snowflake</span>
-                                <span class="skill-tag">AWS</span>
-                                <span class="skill-tag">Excel</span>
-                                <span class="skill-tag">Google Sheets</span>
                             </div>
                         </div>
-                        
-                        <div class="skill-category">
-                            <div class="skill-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                                </svg>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Digital Marketing and BI Consultant</h3>
+                                <span class="company">AG Midia</span>
+                                <span class="period">Janeiro 2021 - Março 2023</span>
                             </div>
-                            <h3>Methodologies</h3>
-                            <div class="skill-tags">
+                            <p class="timeline-description">
+                                Consultoria em marketing digital para empresas locais, fortalecendo presença digital e ajudando a tomar decisões mais estratégicas baseadas em dados coletados.
+                            </p>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">Google Analytics</span>
+                                <span class="skill-tag">Data Studio</span>
+                                <span class="skill-tag">Google Ads</span>
+                                <span class="skill-tag">Facebook Ads</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Performance Marketing Analyst</h3>
+                                <span class="company">Traktor</span>
+                                <span class="period">Março 2022 - Fevereiro 2023</span>
+                            </div>
+                            <p class="timeline-description">
+                                Desenvolvimento de estratégias, planejamento e relatórios para diversos nichos, focando em performance e KPIs-chave para cada negócio, considerando o funil completo de aquisição de clientes.
+                            </p>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">Meta Ads</span>
+                                <span class="skill-tag">Google Ads</span>
                                 <span class="skill-tag">A/B Testing</span>
-                                <span class="skill-tag">Predictive Modeling</span>
-                                <span class="skill-tag">Data Visualization</span>
-                                <span class="skill-tag">ETL</span>
+                                <span class="skill-tag">CRM Analysis</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="languages-section">
-                        <h3>Languages</h3>
-                        <div class="language-item">
-                            <span class="language-name">Portuguese</span>
-                            <span class="language-level">Native</span>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>PPC Analyst</h3>
+                                <span class="company">3MIND Marketing & Tecnologia</span>
+                                <span class="period">Setembro 2021 - Fevereiro 2022</span>
+                            </div>
+                            <p class="timeline-description">
+                                Planejamento, configuração e gestão de campanhas no Google Ads focadas no nicho jurídico. Configuração completa de ferramentas do Google e pesquisa de tendências e palavras-chave.
+                            </p>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">Google Ads</span>
+                                <span class="skill-tag">Google Analytics</span>
+                                <span class="skill-tag">SEMrush</span>
+                                <span class="skill-tag">Google Tag Manager</span>
+                            </div>
                         </div>
-                        <div class="language-item">
-                            <span class="language-name">English</span>
-                            <span class="language-level">Full Professional</span>
+                    </div>
+
+                    <!-- Education Items -->
+                    <div class="timeline-item education">
+                        <div class="timeline-marker education-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Pós-graduação em Data Science</h3>
+                                <span class="company">Centro Universitário UNIFAAT</span>
+                                <span class="period">Janeiro 2025 - Julho 2027</span>
+                            </div>
+                            <p class="timeline-description">
+                                Especialização em Ciência de Dados com foco em metodologias avançadas de análise, machine learning e big data.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item education">
+                        <div class="timeline-marker education-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Graduação em Gestão de Marketing em Mídias Digitais</h3>
+                                <span class="company">Pontifícia Universidade Católica do Paraná</span>
+                                <span class="period">Julho 2021 - Agosto 2023</span>
+                            </div>
+                            <p class="timeline-description">
+                                Formação em gestão de marketing digital com foco em estratégias digitais, análise de dados e otimização de campanhas.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title">Experience & Education</h2>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projetos</h2>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="dashboard">Dashboards</button>
+                <button class="filter-btn" data-filter="analysis">Análise de Dados</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Vamos conversar!</h3>
+                    <p>Estou sempre aberta a discutir oportunidades de colaboração, projetos interessantes ou simplesmente trocar ideias sobre dados e análise.</p>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:anagntto@gmail.com" class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>anagntto@gmail.com</span>
+                        </a>
+                        <a href="tel:+5541985002523" class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <span>+55 (41) 98500-2523</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ana-paula-gnoatto-08852820a" target="_blank" class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://anagntto.github.io/projects/" target="_blank" class="contact-method">
+                            <i class="fas fa-globe"></i>
+                            <span>Portfolio GitHub</span>
+                        </a>
+                    </div>
+                </div>
                 
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">Dec 2024 - Present</div>
-                        <div class="timeline-content">
-                            <h3>Data Analyst</h3>
-                            <h4>Clicksign</h4>
-                            <p>Perform in-depth descriptive analyses using R to uncover patterns, trends, and actionable insights. Develop, validate, and maintain statistical and machine learning models in R. Produce automated reports in R Markdown and Shiny.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">R</span>
-                                <span class="tech-tag">SQL</span>
-                                <span class="tech-tag">Machine Learning</span>
-                                <span class="tech-tag">AWS QuickSight</span>
-                            </div>
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-date">Apr 2023 - Nov 2024</div>
-                        <div class="timeline-content">
-                            <h3>Business Intelligence Analyst</h3>
-                            <h4>Funcional Health Tech</h4>
-                            <p>Created and improved data products for the healthcare and pharmaceutical industries. Conducted exploratory data analysis and applied statistical tools to generate insights and hypotheses.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">SQL</span>
-                                <span class="tech-tag">Tableau</span>
-                                <span class="tech-tag">R</span>
-                                <span class="tech-tag">Snowflake</span>
-                            </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
                         </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-date">Mar 2022 - Feb 2023</div>
-                        <div class="timeline-content">
-                            <h3>Performance Marketing Analyst</h3>
-                            <h4>Traktor</h4>
-                            <p>Development of strategies, planning, and reports for various niches, focusing on performance and key KPIs for each business, considering the full customer acquisition funnel.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Meta Ads</span>
-                                <span class="tech-tag">Google Ads</span>
-                                <span class="tech-tag">A/B Testing</span>
-                                <span class="tech-tag">CRM Analysis</span>
-                            </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <input type="text" id="subject" name="subject" required>
                         </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-date">Jan 2021 - Mar 2023</div>
-                        <div class="timeline-content">
-                            <h3>Digital Marketing and BI Consultant</h3>
-                            <h4>AG Midia</h4>
-                            <p>Digital marketing consulting for local businesses, strengthening digital presence and helping to make more strategic decisions based on collected data.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Google Analytics</span>
-                                <span class="tech-tag">Data Studio</span>
-                                <span class="tech-tag">Google Ads</span>
-                                <span class="tech-tag">Facebook Ads</span>
-                            </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-date">Sep 2021 - Feb 2022</div>
-                        <div class="timeline-content">
-                            <h3>PPC Analyst</h3>
-                            <h4>3MIND Marketing & Technology</h4>
-                            <p>Campaign planning, setup and management on Google Ads focused on the legal niche. Complete setup of Google tools and research on trends and keywords.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Google Ads</span>
-                                <span class="tech-tag">Google Analytics</span>
-                                <span class="tech-tag">SEMrush</span>
-                                <span class="tech-tag">Google Tag Manager</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="education-section">
-                    <h3>Education</h3>
-                    <div class="education-item">
-                        <div class="education-date">Jan 2025 - Jul 2027</div>
-                        <div class="education-content">
-                            <h4>Postgraduate Degree in Data Science</h4>
-                            <p>Centro Universitário UNIFAAT</p>
-                        </div>
-                    </div>
-                    <div class="education-item">
-                        <div class="education-date">Jul 2021 - Aug 2023</div>
-                        <div class="education-content">
-                            <h4>Bachelor's in Digital Media Marketing Management</h4>
-                            <p>Pontifícia Universidade Católica do Paraná</p>
-                        </div>
-                    </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
                 </div>
             </div>
-        </section>
-        
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-title">Projects</h2>
-                <p class="section-subtitle">Developed projects showcasing data analysis and business intelligence expertise.</p>
-                
-                <div class="projects-grid">
-                    <div class="project-card" data-category="dashboard">
-                        <div class="project-image">
-                            <div class="project-placeholder">📊</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>E-Commerce Growth Analysis</h3>
-                            <p>This project aims to perform business performance analysis in e-commerce, including generated revenue, volume of products sold, and average ticket, to identify improvement areas and optimize performance.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">Power BI</span>
-                                <span class="project-tag">SQL</span>
-                                <span class="project-tag">Excel</span>
-                            </div>
-                            <a href="#" class="project-link">View Details</a>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card" data-category="analysis">
-                        <div class="project-image">
-                            <div class="project-placeholder">📈</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>E-Commerce Predictive Analysis</h3>
-                            <p>The objective was to analyze historical data and build a growth projection for organic and paid channels through statistical models to estimate the growth of each channel.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">R</span>
-                                <span class="project-tag">Statistical Modeling</span>
-                                <span class="project-tag">Excel</span>
-                            </div>
-                            <a href="#" class="project-link">View Details</a>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card" data-category="dashboard">
-                        <div class="project-image">
-                            <div class="project-placeholder">📊</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>E-Commerce Sales Tracking</h3>
-                            <p>Dashboard built in Google Data Studio/Looker Studio for visualizing virtual store performance. (Original data was replaced with fictitious data from Google's official store)</p>
-                            <div class="project-tags">
-                                <span class="project-tag">Looker Studio</span>
-                                <span class="project-tag">Google Analytics</span>
-                                <span class="project-tag">Data Visualization</span>
-                            </div>
-                            <a href="#" class="project-link">View Details</a>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card" data-category="analysis">
-                        <div class="project-image">
-                            <div class="project-placeholder">🔍</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>RFM and LTV Analysis</h3>
-                            <p>Customer segmentation analysis using RFM methodology and Lifetime Value calculation to optimize marketing strategies and customer retention.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">Python</span>
-                                <span class="project-tag">Customer Analytics</span>
-                                <span class="project-tag">Segmentation</span>
-                            </div>
-                            <a href="#" class="project-link">View Details</a>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card" data-category="analysis">
-                        <div class="project-image">
-                            <div class="project-placeholder">🐍</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Exploratory Data Analysis with Python</h3>
-                            <p>Comprehensive exploratory data analysis using Python libraries to uncover insights and patterns in complex datasets.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">Python</span>
-                                <span class="project-tag">Pandas</span>
-                                <span class="project-tag">Matplotlib</span>
-                                <span class="project-tag">Seaborn</span>
-                            </div>
-                            <a href="#" class="project-link">View Details</a>
-                        </div>
-                    </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Ana Paula Gnoatto. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/ana-paula-gnoatto-08852820a" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://anagntto.github.io/projects/" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:anagntto@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
-        </section>
-        
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 class="section-title">Contact</h2>
-                <div class="contact-content">
-                    <p class="contact-intro">
-                        Ready to use data analysis to make informed decisions, reduce costs, improve operational efficiency, and increase profits? Get in touch through your preferred channel using the social icons on the sidebar.
-                    </p>
-                    
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M0 4v16h24V4H0zm22 2l-10 6L2 6h20zm-20 12V7.5l10 6 10-6V18H2z"/>
-                                </svg>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Email</span>
-                                <a href="mailto:anagntto@gmail.com" class="contact-value">anagntto@gmail.com</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Location</span>
-                                <span class="contact-value">Curitiba, Paraná, Brazil</span>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                </svg>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">LinkedIn</span>
-                                <a href="https://linkedin.com/in/ana-paula-gnoatto-08852820a" target="_blank" class="contact-value">ana-paula-gnoatto</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Portfolio</span>
-                                <a href="https://anagntto.github.io/projects/" target="_blank" class="contact-value">anagntto.github.io/projects</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
-        </svg>
-    </button>
-    
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>
